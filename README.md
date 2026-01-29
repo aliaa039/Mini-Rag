@@ -1,51 +1,96 @@
-# mini-rag
+# Mini-RAG 🤖
 
-This is a minimal implementation of the RAG model for question answering.
+**Mini-RAG** is a lightweight, minimal implementation of the **Retrieval-Augmented Generation (RAG)** architecture for Question Answering tasks. Built with **FastAPI** and **Python**, this project serves as a streamlined boilerplate or educational reference for integrating LLMs with external knowledge bases.
 
-## Requirements
+## 🚀 Features
 
-- Python 3.8 or later
+* **Minimalist Core:** Strip-down implementation focusing on the essentials of RAG.
+* **FastAPI Powered:** High-performance, asynchronous web framework.
+* **Easy Configuration:** Environment-based setup using `.env` files.
+* **Ready for Testing:** Includes a Postman collection for immediate API interaction.
 
-#### Install Python using MiniConda
+## 📋 Prerequisites
 
-1) Download and install MiniConda from [here](https://docs.anaconda.com/free/miniconda/#quick-command-line-install)
-2) Create a new environment using the following command:
-```bash
-$ conda create -n mini-rag python=3.8
-```
-3) Activate the environment:
-```bash
-$ conda activate mini-rag
-```
+Before you begin, ensure you have the following installed:
 
-### (Optional) Setup you command line interface for better readability
+* **Python 3.8+**
+* **Conda** (MiniConda or Anaconda)
 
-```bash
-export PS1="\[\033[01;32m\]\u@\h:\w\n\[\033[00m\]\$ "
-```
+## 🛠️ Installation & Setup
 
-## Installation
+Follow these steps to set up the development environment.
 
-### Install the required packages
+### 1. Configure the Environment
 
-```bash
-$ pip install -r requirements.txt
-```
+We recommend using **MiniConda** to manage dependencies.
 
-### Setup the environment variables
+**Step 1:** Download and install MiniConda from the [official documentation](https://docs.anaconda.com/free/miniconda/#quick-command-line-install).
+
+**Step 2:** Create a clean virtual environment:
 
 ```bash
-$ cp .env.example .env
+conda create -n mini-rag python=3.8
+
 ```
 
-Set your environment variables in the `.env` file. Like `OPENAI_API_KEY` value.
-
-## Run the FastAPI server
+**Step 3:** Activate the environment:
 
 ```bash
-$ uvicorn main:app --reload --host 0.0.0.0 --port 5000
+conda activate mini-rag
+
 ```
 
-## POSTMAN Collection
+### 2. Install Dependencies
 
-Download the POSTMAN collection from [/assets/mini-rag-app.postman_collection.json](/assets/mini-rag-app.postman_collection.json)
+Install the required Python packages using `pip`:
+
+```bash
+pip install -r requirements.txt
+
+```
+
+### 3. Environment Variables
+
+Configure your secrets and API keys.
+
+1. Copy the example environment file:
+```bash
+cp .env.example .env
+
+```
+
+
+2. Open the `.env` file in your text editor and populate the variables (e.g., your `OPENAI_API_KEY`).
+
+---
+
+## ⚡ Usage
+
+### Running the Server
+
+Start the FastAPI application using Uvicorn. The server will run on port **5000**.
+
+```bash
+uvicorn main:app --reload --host 0.0.0.0 --port 5000
+
+```
+
+* `--reload`: Enables auto-reload for development (server restarts on code changes).
+* `--host 0.0.0.0`: Makes the server accessible externally.
+
+### API Documentation
+
+Once the server is running, you can access the automatic interactive API documentation provided by FastAPI:
+
+* **Swagger UI:** `http://localhost:5000/docs`
+* **ReDoc:** `http://localhost:5000/redoc`
+
+---
+
+## 🧪 Testing with Postman
+
+We have included a Postman collection to help you test the endpoints quickly.
+
+1. **Download:** [Click here to download the Postman Collection](https://www.google.com/search?q=/assets/mini-rag-app.postman_collection.json).
+2. **Import:** Open Postman -> `File` -> `Import` -> Select the downloaded JSON file.
+3. **Run:** Execute the requests against your local server.
