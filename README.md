@@ -1,6 +1,6 @@
 # Mini-RAG 🤖
 
-**Mini-RAG** is a lightweight, minimal implementation of the **Retrieval-Augmented Generation (RAG)** architecture for Question Answering tasks. Built with **FastAPI** and **Python**, this project serves as a streamlined boilerplate or educational reference for integrating LLMs with external knowledge bases.
+**Mini-RAG** is a lightweight, minimal implementation of the **Retrieval-Augmented Generation (RAG)** architecture for Question Answering tasks. Built with **FastAPI** and **Python**.
 
 ## 🚀 Features
 
